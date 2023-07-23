@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<scer<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // wwartość początkowa licznika to będzie -2
+       // licznik sprawdzamy czy jest mniejszy równy 2
+       // w każdej iteracji musimy sprawdzić za pomocą if
+       // i wyświetlić informację czy liczba jest dodatnia, ujemna czy zero
+       // albo wersja z while albo z if
+
+       // rozwiązanie dla zwykłego while
+
+       let num = -2;
+       while (num <= 2) {
+        if (num < 0) console.log("num mniejsze od zera:", num);
+        if (num == 0) {
+            console.log("num ma wartość zero");
+        } else if (num > 0) {
+            console.log("num jest dodatnie:", num);
+        }
+        num++;    
+
+       }
+
+       // rozwiązanie dla pętli for
+
+       for (let number = -2; number <= 2; number++) {
+        if (number < 0) console.log("number mniejsze od zera:", number);
+        if (number == 0) {
+            console.log("number ma wartość zero");
+        } else if (number > 0) {
+            console.log("number jest dodatnie:", number);
+       }
+       num++;
+    }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        let a; //zmienna jest zadeklarowana, ale nie zdefinowana
+// a undefined
+console.log(a); //undefined, nie ma wartości w zmiennej
+if (a == undefined) console.log("Brak wartości");
+// gdyby w 10 linijce było let a = 2 to nie wywoła się brak wartości
+
+/* b; // błąd: ReferenceError: b is not defined */
+// w praktyce zmienna jest niezadeklarowana, bo nie ma użytego let, const czy var
+
+
+console.log(typeof b);  //undefined
+// === czy wartości są równe i również czy zgadzają się typy
+
+
+
+// null - intencjonalne wskazanie że zmienna nie ma wartości
+let test = 5;
+console.log(test); //5 
+//zmienna zadeklarowana i zdefiniowana
+
+// nie potrzebujemy wartości 5 i przypisujemy null
+test = null;
+console.log(test); //null
+console.log(typeof null); //object
+
+// null i underfined to falsy values - fałszywe wartości 
+if (null) console.log("nie wykona się, bo null na false"); 
+if (undefined) console.log("nie wykona się, bo undefined na false");
+
+
+//proste porównanie
+if (null == undefined) console.log("wykona się bo true"); //wykona się bo true
+//to nie efekt który byśmy chcieli więc
+//porównanie ścisłe - porównanie zarówno typu! mamy false bo dwa różne typy .. jak i wartości porównanie
+if( null === undefined) console.log("nie wykona się"); // nie ma nic
+
+
+
+    </Script>
+</body>
+</html>

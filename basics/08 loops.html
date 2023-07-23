@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // pętla pozwala na wielkokrotne wykonanie tego samego kodu, jeśli jest spełniony warunek do wykonania pętli
+        let i = 0;
+//aby wyswietlily sie liczby od 0 do 4
+        while (i < 3) {
+            console.log("Wartość i:", i);
+            i = i + 1;
+
+        }
+          // musimy ograniczyć przed kliknieciem ctrl s  
+        
+          console.log("Koniec pętli while.");
+        
+
+
+          let a = 0;
+
+          do {
+            console.log("Wartość a:",a);
+            a = a - 1;
+
+          } while (a > 0)
+
+          console.log("Koniec pętli do while");
+          // w pedli do while, najpierw wykkonywany jest kod wewnątrz a potem sprawdzany jest warunek
+// inkrementacja b++
+// to damo co
+// b = b + 1
+// b-- dekrementacja b = b - 1 
+
+          for (let b = 0; b < 3; b++) {
+              console.log("Wartość b:",b);
+          }
+          console.log("Koniec pętli for.");
+
+          for (let c = 4; c >= 0; c--) {
+            console.log("Wartość c:",c);
+          }
+
+          
+    </script>
+</body>
+</html>

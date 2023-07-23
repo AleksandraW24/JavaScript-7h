@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    function add(a, b) {
+        let c = a + b;
+        console.log("Wynik:",c);
+    }
+    add(8,3);
+    add(20,15);
+    add(100,105);
+
+    let x = 1;
+    let y = 45;
+    if (x > 5) {
+        add (x,y);
+    }
+// gdy x = 1 kod się nie wykona bo nie spełnia warunku więc false
+
+// definicja funkcji 
+//nazwa funkcji : multiply mnożenie
+//parametry funkcji: a oraz b
+     function multiply(a, b) {
+        return a * b;
+     }
+
+     let result = multiply(15, 4);
+     console.log("result:", result);
+
+     // 15 i  4 to argumenty funkcji podczas jej wywołania
+
+
+     //wyrażenie funkcyjne - function expression
+     let division = function(a, b) {
+        return a / b;
+     }
+
+     let divisionResult = division(100,3);
+     console.log("Wynik dzielenia:",divisionResult);
+// wyszła zmienna przecinkowa 33,33333
+
+
+//zmienne lokalne i globalne
+
+let data = 55; //zmienna globalna, dostępna w całym naszym naszym programie js
+let text = "JavaScript";
+
+function test() {
+    let text = "Hello"; // zmienna lokkalna widoczna wyłącznie wewnątrz naszej funkcji
+    console.log("Wartość data:", data);
+    console.log("Wartość text:", text);
+}
+
+test();
+console.log(text); // nie ma poza funkcją powyżej dostępu do zmiennej text - Uncaught ReferenceError: text is not defined
+
+// zmienne lokalne mają większy priorytet jeśli jest taka sama nazwa zmiennej niż zmienna globalna gdy jest wywołana
+
+
+    </script>
+</body>
+</html>

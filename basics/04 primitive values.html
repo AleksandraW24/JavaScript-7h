@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // dynamicznie typowany język
+    let num = 89;  // liczba - Number
+    let data = 10;  // liczba - Number
+    data = "Hello"; // tekst - String
+    data = 'Hello'; // tekst - String - to samo, ale z apostrofami, jeśli cały czas w apostrofach to ciągle w apostrofach
+    data = ` Hello
+    World!
+    and ${num}
+    Hello Again!`; //przcisk pod esc nad tab, pozwala na zapis w wielu linijkach
+    // $(num) odwołujemy się do zmiennej ale inny nawias
+    // łancuch zaków - String - jest w baktickach to nazywamy go template literals
+    console.log(data);
+   // wartość Boolean logiczna prawda albo fałsz
+   let flag = true; // wartość logiczna tzw Boolean - wartość true
+   flag = false; // Boolean - wartość false - fałsz
+let someValue; //undefined - niezdefinowany, nic nie zostało przypisane do tej zmiennej
+// brak przypisania wartości podczas deklaraci zmiennej automatycznie przypisze wartość undefinied
+console.log(someValue); //undefinied
+someValue = 77;
+console.log(someValue);
+// null to wartość pusta - gdy intencjonalnie chcemy wskazać, że dana zmienna ma wartość pustą
+someValue = null;
+console.log(someValue);
+
+//to poniżej poznamy w przyszłości
+//Symbol
+//BigInt
+//typy złozone jeszcze czyli obiekty
+
+//zmienne zawsze deklarujemy przed ich użyciem!!!
+//console.log(name);
+let name = "Ania";
+console.log(name);
+// gdy najpierw użyjemy a potem zastosujemy to pojawia się błąd Uncaught ReferenceError: Cannot access 'name' before initialization
+
+// let name = "Daniel"; // błąd Uncaught SyntaxError: Identifier 'name' has already been declared
+// jak chcemy zmienić wartość name to likwidujemy słowo kluczowe i klikamy samo name
+name = "Daniel";
+console.log(name);
+//jest to jezyk dynmicznie typowany - java Script, to danej zmiennej różny typ
+   </script>
+</body>
+</html>

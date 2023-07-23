@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // zmienne oraz stałe potrzebne do wysłania maila
+        const sender = "myself";
+        let recipient = "Ania@example.com";
+        let title = "Hej cześć i czołem";
+        //let content = "Treść maila";
+        let content = `
+        Cześć
+        treść maila
+        Pozdrawiam
+        `;
+        let sendFlag = false;
+        let attachment = "lista książek";
+        let emailDate = "2022.01.01";
+        const emailProgram = "Gmail";
+        let bcc = "ania@example.com, daniel@example.com, pawel@example.com";
+        // trzy odzielne elemnty to możemy wykorzystać tablice
+        let bcc2 = ["ania@example.com", "daniel@example.com","pawel@example.com"];
+        console.log(bcc2[1])
+        // jak chcemy się odwołac to nazwe zmiennej a potem w kwadratowm nawiasie numer zmiennej, liczymy od zera!!!
+        let cc = ["Asia@example.com", "karol@example.com"];
+        console.log(cc[1]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // identyfikatory to nazwy, które stosujemy do zmiennych , litera podkreślenie znak dolara musi sie zaczynać
+        let text = "Hello";
+        // Źle nazwane zmienne
+       // let 1text = "Hellooo"; Uncaught SyntaxError: Invalid or unexpected token 
+       // nie może się zaczynać liczbą identyfikator
+      // let %number = 10; Uncaught SyntaxError: Invalid left-hand side in assignment
+      // zmienna nie może zaczynać się znakiem specjalnym
+     // const some number = 10; // nie możemy stosować spacji w identyfikatorze zmiennej, Uncaught SyntaxError: Missing initializer in const declaration;
+      // let the.Nu-mb,er = 10; //Nie można stosować spacji, kropek, przecinków i myślników w identyfikatorze, Uncaught SyntaxError: Unexpected token '.' ;
+      // let const = 100; // nie można nazwać zmiennej samym słowem kluczowym np. const, Uncaught SyntaxError: Unexpected token 'const';
+      //ale już let const1 = 100; można
+       // nie stosujemy słów kluczowych jako identyfikator
+    
+// każde nowe słowo z dużej litery
+       // prawidłowe nazwy zmiennych
+       let someNumberInTheDatabase = 99; //Camel Case
+       let _text = "Hello"; 
+       const $data = 12345;
+       let otherDataąśłó = "text"; //polskie unicode są dopuszczalne, lecz powinniśmy ich unikać
+
+       //JavaScript jest to język case-sensitive - zwraca uwagę na wielkość liter, odróznia wielkie litery
+       let data = 10;
+       const DATA = 125;
+// to powyżej to dwie całkowicie różne nazwy
+       data = 45; //błędu nie ma bo odwołuje się do zmiennej z małych liter
+       
+
+
+    </script>
+</body>
+</html>

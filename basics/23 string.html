@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// string - inaczej zwany jest literały znakowe, lub literały łancuchowe to ciąg znaków UTF-16, ogonki polskie też się wliczają
+
+const s1 = 'To jest tekst';
+const s2 = "To jest tekst"; 
+//może być 1 i 2 wersja, ale nie mieszajmy
+
+const num =78;
+//literał szablonu
+const s3 = ` 
+String w wielu
+liniach ${num}
+wyrażenia js: ${1 + 2 + 3}`; //baptiki pod esc
+// za pomocą dolara i nawiasów klamrowych osadzamy liczbe
+console.log(s3); // String w wielu
+//liniach 78 
+//wyrażenia js: 6
+
+console.log("Tekst".length); //5 znaków
+console.log("".length); //0 znaków
+
+console.log("Tekst"[2]); //k - po indeksie pobierzemy znak
+
+//gdy chcemy pobrać ostatni znak w naszym łancuchu znaków
+console.log(s3[s3.length - 1]); //6, wcześniej wychodziło nic, bo baptik czyli to pod esc `` był w nastepnej linijce i znak przed był pusty
+
+//inny sposób
+console.log(s3.charAt(5)); //znak pod 5 indeksem //i
+
+console.log(s3.length); //43
+
+//utf16 gdy chcemy wartość to od 0 do 60tys około
+console.log( s3.charCodeAt(5));//105 // https://www.codetable.net/decimal/105 jest to oczywiście litera i  -> patrz linijka 36
+
+
+//wyszukiwanie słów w tekście
+let simpleText = "Ala ma kota, a Ania ma psa";
+//chcemy inf pod którym indeksem mamy słowo ania wewnątrz łancucha słow
+let pos = simpleText.indexOf("Ania");
+console.log(pos); // Ania jest pod 15 indeksem, liczymy oczywiście od 0
+//chcemy wyszukać od końca do przodu
+
+pos = simpleText.lastIndexOf("ma");
+console.log(pos); //20
+
+//drugi argument od którego miejsca ma być wyszukanie
+pos = simpleText.indexOf("ma",6); 
+console.log(pos); //20 
+
+pos = simpleText.lastIndexOf("ma",10);
+console.log(pos); //4
+
+//trim() - wycina białe znaki z początku i końca łańcucha
+console.log( "   Tekst  cos  tam    ".trim()); //Tekst  cos  tam nie ma spacji na początku
+console.log( `
+
+
+test
+`.trim()); //test - wyszczynone białe znaki wraz ze znakami białej linii
+
+// toUpperCase() - litery będą powiększone
+console.log("ala".toUpperCase()); //ALA
+// toLowerCase() - aby mieć same małe litery
+console.log("AUTO".toLowerCase()); //auto
+
+//łączenie łańcuchów znaków
+
+const str1 = "someting";
+const resultStr = "text" + " " + str1;
+console.log(resultStr); //text someting
+
+let str2 = "test".concat(" other test");
+console.log(str2); //test other test
+
+//pobieranie fragmentów z string
+
+let str5 = "0123456789";
+console.log(str5.slice(2)); //23456789
+console.log(str5.slice(4,8)) // chcemy od 4 indeksu do 8 indeksu ale and drugi argument w praktyce oznacza indeks podany minus1
+//w praktyce od 4 do 7 indeksu, //4567 - z console
+console.log(str5.slice(4,9)) //45678
+console.log(str5.slice(-3)); //w praktyce to będą minus 3 znaki od końca //789
+console.log(str5.slice(-6, -2)); //4567
+
+//również pobiera fragment poniżej funkcja
+
+console.log(str5.substr(0)); //0123456789
+console.log(str5.substr(5)); //56789
+console.log(str5.substr(5, 3)); //567 -trzy znaki od 5 indeksu
+console.log(str5.substr(-7, 2)); //34
+
+//split() dzieli string ze względu na przekazany znak
+let str6 = "a1 b2 c3 d4 e";
+let dataStr6 = str6.split(" ");
+console.log(dataStr6); //(5) ['a1', 'b2', 'c3', 'd4', 'e']
+
+//replace() zamienia słowa w stringu
+let str7 = "Ala ma kota";
+let str8 = str7.replace("kota", "psa");
+console.log(str8); //Ala ma psa
+
+//mutowalność vs niemutowalność
+//w JS tylko tablice i obiekty są mutowalne czyli mogą być zmieniane
+// Prymitywy jak String mogą przyjmować różne wartości, ale przy każdej zmianie otrzymujemy nową wartość
+
+let str9 = "Tekst";
+str9[0] = "A";
+console.log(str9); //Tekst, string i inne prymitywy są niemutowalne
+let str10 = str9.replace("T", "A"); //zwróci nowy string
+console.log(str10); //Aekst
+
+//tablica jest mutowalna podobnie jak obiekty 
+//przy zmianie wartości nie powstaje nowy obiekt tylko modyfikowany jest już istniejący
+let arr =["T", "E", "K", "S", "T"];
+arr[0] = "A";
+console.log(arr); //(5) ['A', 'E', 'K', 'S', 'T']
+
+let obj = {a: 1};
+obj.a = 7;
+console.log(obj); //{a: 7} czyli obiekt jest mutowalny
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

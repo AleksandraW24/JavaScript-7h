@@ -1,0 +1,52 @@
++<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// tworzymy obiekt person
+// przypisać wewnętrze zmienne czyli właściwości
+// imię, nazwisko, wiek, miasto, kod pocztowy, kraj
+// + metoda: getName powinna zwrócić imię oraz nazwisko np. name + " " + surname
+
+let person = {
+    name : "Aleksandra",
+    surname : "Wójciak",
+    age : 22,
+    address: {
+        city : "Tomaszów Mazowiecki", 
+        postCode: "97-217",
+        country : "Poland",
+    },
+    company : "Example.com",
+
+    getName : function() {
+     return this. name + " " + this.surname;
+    }
+};
+
+console.log(person.getName());
+console.log(person.address.country);
+
+function getNewPerson(personName, surname, age) {
+    return {
+        name: personName,
+        surname:surname,
+        age: age,
+    };
+}
+
+const user = getNewPerson("Ania", "Kowalska", 29);
+console.log(user);
+
+const user2 = getNewPerson("Olek", "K.", 33);
+console.log(user2);
+
+
+
+    </script>
+</body>
+</html>
